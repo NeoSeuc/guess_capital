@@ -1,0 +1,472 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body, .wrapper {
+    height: 100%;
+}
+
+body {
+    background: url("content-images/back.jpg");
+}
+
+.header {
+    height: 10%;
+    background: white;
+    position: relative;
+    z-index: 1000;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    height: 85%;
+    overflow: hidden;
+}
+
+.footer {
+    height: 5%;
+/ / background: #039BE5;
+}
+
+.imagesGroups {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.imagesGroups .imgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 450px;
+    overflow: hidden;
+    transition: 1s all;
+}
+
+
+.imagesGroups .imgContainerSecond {
+    width: 550px;
+    height: 550px;
+
+}
+
+.flexContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnStartGame {
+    background: green;
+    opacity: 0.7;
+    padding: 20px 40px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 1s all;
+    -webkit-box-shadow: 0px 0px 39px -2px rgba(0, 255, 9, 1);
+    -moz-box-shadow: 0px 0px 39px -2px rgba(0, 255, 9, 1);
+    box-shadow: 0px 0px 39px -2px rgba(0, 255, 9, 1);
+}
+
+.btnStartGame:hover {
+    background: #45dc25;
+    opacity: 0.9;
+    transition: 0.5s all;
+    transform: scale(1.1, 1.1);
+    color: #008000;
+}
+
+.imagesGroups .imgContainerSecond {
+    position: relative;
+    z-index: 100;
+    bottom: 30px;
+    -webkit-box-shadow: 0px 0px 39px -2px rgba(0, 123, 255, 1);
+    -moz-box-shadow: 0px 0px 39px -2px rgba(0, 123, 255, 1);
+    box-shadow: 0px 0px 39px -2px rgba(0, 123, 255, 1);
+}
+
+
+.gameScreen {
+    width: 100%;
+    height: 100%;
+    background: rgba(38, 73, 118, 0.68);
+}
+
+.gameField {
+    background: rgba(255, 255, 255, 0.7);
+    height: 600px;
+    width: 600px;
+    border-radius: 40px;
+}
+
+.flexSpaceBetween {
+    justify-content: space-between;
+}
+
+.gameHealth {
+    background: white;
+    border: 2px solid #9a1b1b;
+    padding: 5px 10px;
+    min-width: 168px;
+    border-radius: 50px;
+    margin-top: 40px;
+}
+
+.gameHeader {
+    height: 20%;
+    flex-direction: column;
+    background: white;
+    padding-top: 25px;
+    border-radius: 50px 50px 0 0;
+    border-top: 3px solid #9a1b1b;
+}
+
+.gameMain {
+    height: 70%;
+}
+
+.gameFooter {
+    height: 10%;
+    background: white;
+    border-radius: 0 0 50px 50px;
+    border-bottom: 3px solid #9a1b1b;
+}
+
+.answer {
+    text-align: center;
+    padding: 5px 20px;
+    margin: 5px;
+    background: white;
+    font-size: 24px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 1s all;
+    width: 400px;
+    max-width: 400px;
+    overflow-wrap: break-word;
+}
+
+.answer:hover {
+    transition: 1s all;
+    background: lightskyblue;
+}
+
+.gameQuestion {
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+.gameQuestion .text {
+    font-size: 40px;
+    background: white;
+    width: 100%;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.gameFooter {
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.questionCountry {
+    color: #039BE5;
+    font-weight: 800;
+}
+
+.wrongAnswer {
+    background: red;
+    color: white;
+    animation-name: fadeOutRight;
+    animation-delay: 1s;
+}
+
+.rightAnswer {
+    background: green;
+    color: white;
+    animation-name: fadeOutLeft;
+    animation-delay: 1s;
+}
+
+.earthAnimation {
+
+    -webkit-animation: spin 8s linear infinite;
+    -moz-animation: spin 8s linear infinite;
+    animation: spin 8s linear infinite;
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.logoBigText {
+    position: relative;
+
+}
+
+.logoImg {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    padding: 20px;
+    margin-top: 20px;
+    width: 137px;
+}
+
+.logoInnerText {
+    position: absolute;
+    z-index: 10;
+    color: #039BE5;
+    font-size: 30px;
+    width: 700px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.welcomeBlock {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.68);
+    width: 50%;
+    height: 70%;
+    z-index: 1000;
+    flex-direction: column;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+
+    -webkit-box-shadow: 0px 0px 39px -2px rgb(255, 253, 251);
+    -moz-box-shadow: 0px 0px 39px -2px rgb(242, 255, 250);
+    box-shadow: 0px 0px 39px -2px rgb(246, 255, 255);
+}
+
+.welcomeTitle {
+    color: #039BE5;
+    font-size: 50px;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 40px 40px 0 0;
+    background: white;
+}
+
+.welcomeMainText {
+/ / margin-top: 25 px;
+    padding: 15px 20px;
+    background: white;
+    text-align: center;
+    font-size: 18px;
+}
+
+.inputBlock {
+    background: white;
+    width: 100%;
+/ / margin-top: 25 px;
+    border-radius: 0 0 40px 40px;
+}
+
+.mode {
+    cursor: pointer;
+    padding: 5px 10px;
+    display: flex;
+    margin: 5px;
+    transition: 0.5s all;
+    flex-wrap: nowrap;
+}
+
+.modeContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.mode:hover {
+    background: #bce1fa;
+    transition: 0.5s all;
+}
+
+.mode .circle {
+    width: 24px;
+    height: 24px;
+    background: #039BE5;
+    border-radius: 50%;
+}
+
+.selectedMode .innerCircle {
+    background: white;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.modeTitle {
+    font-size: 18px;
+    font-weight: bolder;
+    color: #039BE5;
+    position: relative;
+    left: 7px;
+}
+
+.modeDescription {
+    position: relative;
+    left: 7px;
+}
+
+.playerName {
+    background: none;
+    padding: 5px 20px;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 24px;
+    margin-left: 25px;
+    width: 50%;
+
+}
+
+.inputBlock {
+    padding: 15px 30px;
+
+}
+
+
+.popupWrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 30;
+    background: rgba(0, 0, 0, 0.46);
+}
+
+.resultPopup {
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    background: white;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-box-shadow: 0px 0px 39px -2px rgb(219, 217, 252);
+    -moz-box-shadow: 0px 0px 39px -2px rgb(228, 231, 255);
+    box-shadow: 0px 0px 39px -2px rgb(234, 232, 255);
+}
+
+.popupHeader {
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.popupScore {
+    font-size: 36px;
+}
+
+.popupBtn {
+    background: #039BE5;
+    border-bottom: 6px solid #003c8f;
+    padding: 15px 25px;
+    margin-top: 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    -webkit-box-shadow: 0px 0px 39px -2px rgb(53, 67, 255);
+    -moz-box-shadow: 0px 0px 39px -2px rgb(47, 83, 255);
+    box-shadow: 0px 0px 39px -2px rgb(45, 99, 255);
+    text-decoration: none;
+    color: #004b91;
+
+}
+
+.popupActions {
+    margin-top: 50px;
+}
+
+@media only screen and (max-width: 860px) {
+    .welcomeBlock {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .gameQuestion .text {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        text-align: center;
+        border-radius: 0 0 50px 50px;
+    }
+
+    .gameHeader {
+        height: 30%;
+    }
+
+    .gameMain {
+        height: 60%;
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    .welcomeBlock {
+        width: 100%;
+    }
+
+    .answer {
+        max-width: 300px;
+    }
+
+}
+
+@media only screen and (max-width: 360px) {
+    .header {
+        height: 17%;
+    }
+
+    .main {
+        height: 107%;
+    }
+
+}
+
+@media only screen and (max-width: 285px) {
+    .answer {
+        max-width: 200px;
+    }
+
+    .gameQuestion .text {
+        font-size: 32px;
+    }
+}

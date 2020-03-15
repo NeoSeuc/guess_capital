@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Our World</title>
+    <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrapper">
+    <header class="header flex">
+        <div class="logoBigText flex animated zoomIn delay-2s slower">
+            <img src="content-images/earth.png" class="logoImg earthAnimation"  alt="">
+        </div>
+
+    </header>
+    <main class="main">
+        <div class="homeScreen flexContainer" >
+            <div class="imagesGroups">
+                <div class="imgContainer imgContainerFirst animated bounceInLeft delay-2s"><img
+                            src="content-images/home1.jpg" alt="" class="img1" height="450"></div>
+                <div class="imgContainer imgContainerSecond animated fadeInDownBig delay-1s"><img
+                            src="content-images/home2.jpg" alt="" class="img2" height="550"></div>
+                <div class="imgContainer imgContainerThird animated lightSpeedIn "><img src="content-images/home3.jpg"
+                                                                                        alt="" class="img3"
+                                                                                        height="450"></div>
+            </div>
+            <div class="welcomeBlock animated zoomIn">
+                <div class="welcomeTitle animated fadeInDown delay-1s">Добро пожаловать, дорогой гость!</div>
+                <span class="welcomeMainText animated fadeInDown delay-2s">
+                    На этом сайте у Вас есть отличная возможность с <b>пользой</b> убить время.<br>
+                    Здесь Вы наконец-то выучите столицы стран!<br>
+                    Да да, не удивляйтесь, с <b>практикой</b> у Вас всё получится, поэтому заходите сюда каждый день,
+                    практикуйтесь и <b>удивляйте</b> своих коллег во время кофе брейка. <br>
+                    <b>Введите своё имя (любое, можете придумать)</b>,
+                    выберите режим и становитесь <b>умнее!</b>. <b>Удачи!</b>
+                </span>
+                <div class="inputBlock animated fadeInDownBig">
+                    <label for="name">Ваше имя (ник):</label>
+                    <input type="text" id="name" class="playerName" placeholder="Вася"> <br><br>
+                    <span>Выберите режим:</span><br>
+                    <div class="modeBlock">
+                        <div class="mode js_radio_mode selectedMode animated fadeInRight delay-3s" data-mode="1">
+                            <div class="circle flex">
+                                <div class="innerCircle"></div>
+                            </div>
+                            <div class="modeContainer">
+                                <div class="modeTitle">
+                                     Угадай столицу страны.
+                                </div>
+                                <div class="modeDescription">
+                                    В этом режиме будет показана страна и 4 разных столицы. Вам надо будет выбрать ту столицу
+                                    которая соответствует показаной стране.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mode js_radio_mode animated fadeInLeft delay-3s" data-mode="2">
+                            <div class="circle flex">
+                                <div class="innerCircle"></div>
+                            </div>
+                            <div class="modeContainer">
+                                <div class="modeTitle">
+                                     Угадай страну по столице.
+                                </div>
+                                <div class="modeDescription">
+                                    Этом режиме похож на предыдущий только всё наоборот. Вам надо будет выбрать ту страну
+                                    которая соответствует показаной столице.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mode js_radio_mode animated fadeInRight delay-3s" data-mode="3">
+                            <div class="circle flex">
+                                <div class="innerCircle"></div>
+                            </div>
+                            <div class="modeContainer">
+                                <div class="modeTitle">
+                                     Угадай страну по флагу.
+                                </div>
+                                <div class="modeDescription">
+                                    В этом режиме вам будет показан флаг. Вам надо будет выбрать ту страну
+                                    которая соответствует показаному флагу.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mode js_radio_mode animated fadeInLeft delay-3s" data-mode="4">
+                            <div class="circle flex">
+                                <div class="innerCircle"></div>
+                            </div>
+                            <div class="modeContainer">
+                                <div class="modeTitle">
+                                     Угадай флаг по названию страны.
+                                </div>
+                                <div class="modeDescription">
+                                    Этот режим похож на предыдущий только наоборот. Вам надо будет выбрать тот флаг
+                                    которая соответствует показаной стране.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btnStartGame jsStartGame animated zoomInUp delay-4s">Начать игру</div>
+            </div>
+        </div>
+        <div class="gameScreen flexContainer animated "  style="display: none">
+            <div class="gameField animated">
+                <header class="gameHeader flex flexSpaceBetween">
+                    <div class="gameQuestion flex animated flipInX">
+                        <img src="images/ukraina.gif" alt="ukraine">
+                        <span class="text"><span class="questionText">Столица страны</span> <span class="questionCountry">Украина</span>?</span>
+                    </div>
+                </header>
+                <main class="gameMain flex animated">
+                    <div class="answers">
+                        <div class="answer animated fadeInLeft js_answer">Очень длинное имя столицы</div>
+                        <div class="answer animated fadeInRight  js_answer">Киев</div>
+                        <div class="answer animated fadeInLeft js_answer">Абу-Даби</div>
+                        <div class="answer animated fadeInRight js_answer">Буэнос-Айрес</div>
+                    </div>
+                </main>
+                <footer class="gameFooter flex">
+                    <div class="gameHealth flex">
+                        <img src="content-images/heart.png" alt="" width="48" class="animated">
+                        <img src="content-images/heart.png" alt="" width="48" class="animated">
+                        <img src="content-images/heart.png" alt="" width="48" class="animated">
+                    </div>
+                </footer>
+
+            </div>
+            <div class="popupWrapper flex animated" style="display: none">
+                <div class="resultPopup animated delay-1s">
+                    <div class="popupHeader flex">
+                        <img src="content-images/thumbUp.jpg" alt="" width="200">
+                        <div class="popupScore js_score">Вася, ваш результат: 34</div>
+                        <div class="popupText">Отлично, у вас неплохо получается!</div>
+                    </div>
+                    <div class="popupActions">
+                        <a href="/world" class="popupBtn">На главную</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer"></footer>
+</div>
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
