@@ -21,7 +21,8 @@ $('.jsStartGame').on('click', () => {
     if (inputName) {
         name = inputName;
     }
-    startGame(1, name);
+    mode = $('.selectedMode').data('mode');
+    startGame(mode, name);
 
 });
 
@@ -61,6 +62,9 @@ function nextQuestion(mode) {
         case 1:
             showRandomCountry();
             break;
+        case 2:
+            showRandomCapital();
+            break;
     }
 }
 
@@ -68,6 +72,11 @@ function startGame(mode = 1, userName = 'Vasya') {
     switch (mode) {
         case 1:
             showRandomCountry();
+            break;
+        case 2:
+            $('.gameQuestion img').addClass('capital').attr('src', 'content-images/capital.png');
+            $('.questionText').text('Какой стране принадлежит столица');
+            showRandomCapital();
             break;
     }
 }
@@ -85,12 +94,30 @@ function checkAnswer(mode = 1, selectedAnswer, currentQuestion) {
         case 1:
             return selectedAnswer.trim() === findDataByField('country_name', currentQuestion).country_capital.trim();
         case 2:
-            break;
+            return selectedAnswer.trim() === findDataByField('country_capital', currentQuestion).country_name.trim();
         case 3:
             break;
         case 4:
             break;
     }
+
+}
+
+function showRandomCapital() {
+    var question = getRandomData(true);
+    currentQuestion = question.country_capital;
+    var answers = [];
+    answers.push(question.country_name);
+    for (let i = 0; i < 3; i++) {
+        answers.push(getRandomAnswerIndex().country_name);
+    }
+    answerUsedIndex = [];
+    answers = shuffle(answers);
+    $('.answer').each((ind, e) => {
+        $(e).text(answers[ind]);
+    });
+
+    $('.questionCountry').text(question.country_capital);
 
 }
 
@@ -109,7 +136,6 @@ function showRandomCountry() {
     });
 
     $('.questionCountry').text(question.country_name);
-    $('.gameQuestion img').attr('src', question.country_flag_image);
 }
 
 function getRandomData(addIndexToUsed = false) {

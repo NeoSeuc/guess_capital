@@ -1,0 +1,7 @@
+{
+  "name": "Угадай столицу",
+  "short_name": "guess_capital",
+  "lang": "ru",
+  "start_url": "/",
+  "display": "fullscreen"
+}

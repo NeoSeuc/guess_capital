@@ -410,6 +410,11 @@ body {
 
 }
 
+.capital {
+    width: 60px;
+    margin-top: -30px;
+}
+
 .popupActions {
     margin-top: 50px;
 }
